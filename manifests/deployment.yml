@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sagarpateltestci 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sagarpateltestci 
+    spec:
+      containers:
+        - name: sagarpateltestci 
+          image: sp2910.azurecr.io/sagarpateltestci
+          ports:
+          - containerPort: 8080

@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kubet-cee4"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kubet-cee4"
+    spec:
+      containers:
+        - name: "kubet-cee4"
+          image: "mycontpipelines.azurecr.io/kubet"
+          ports:
+          - containerPort: 8080
